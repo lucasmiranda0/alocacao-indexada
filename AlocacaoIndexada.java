@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -16,6 +18,21 @@ public class AlocacaoIndexada {
         particao = new byte[TAMANHO];
         mapaDeBits = new boolean[TAMANHO];
         listaBlocoDeIndices = new LinkedList<>();
+    }
+
+    public void recuperarDados() throws IOException {
+        for(int i = 0; i < listaBlocoDeIndices.size(); i++) {            
+            byte[] recuperacao = new byte[listaBlocoDeIndices.get(i).getSize()];                                    
+            for(int j = 0; j < recuperacao.length; j++) {
+                
+                recuperacao[j] = particao[listaBlocoDeIndices.get(i).lista.get(j)];
+                System.out.println(recuperacao.length);
+            }
+            String fileOutput = "/home/lucas/Projects/so2/alocacao-indexada/";
+            fileOutput = fileOutput + "recuperacao" + i + ".txt";            
+            Path path = Paths.get(fileOutput);
+            Files.write(path, recuperacao);
+        }
     }
 
     public void adicionarNoBuffer(String filePath) throws IOException {        

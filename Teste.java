@@ -3,19 +3,17 @@ public class Teste {
     public static void main(String[] args) throws Exception {
         AlocacaoIndexada ai = new AlocacaoIndexada();  
         
-        String filePath = "/home/lucas/Projects/so2/alocacao-indexada/teste.txt";                
+        String filePath = "";                
         ai.adicionarNoBuffer(filePath);
-        ai.adicionarNaParticao();        
-        ai.listaBlocoDeIndices.get(0).print();
-
+        ai.adicionarNaParticao();                
+        
         System.out.println("---------------");
-
-        /*
-        String filePath2 = "/home/lucas/Projects/so2/alocacao-indexada/teste1.txt";
+    
+        String filePath2 = "";
         ai.adicionarNoBuffer(filePath2);
-        ai.adicionarNaParticao();
-        ai.listaBlocoDeIndices.get(1).print();      
-        */
+        ai.adicionarNaParticao();        
+        
+        ai.recuperarDados();
 
         System.out.println("PARTIÇÂO");
         

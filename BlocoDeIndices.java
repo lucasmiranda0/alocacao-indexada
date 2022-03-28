@@ -2,10 +2,14 @@ import java.util.LinkedList;
 
 public class BlocoDeIndices {
     
-    private LinkedList<Integer> lista;
+    public LinkedList<Integer> lista;
     
     public BlocoDeIndices() {
         lista = new LinkedList<>();
+    }
+
+    public int getSize() {
+        return lista.size();
     }
 
     public void add(int i) {
