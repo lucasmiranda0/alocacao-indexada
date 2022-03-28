@@ -8,7 +8,7 @@ public class AlocacaoIndexada {
     
     private final int TAMANHO = 20;
     private byte[] buffer;
-    private byte[] particao;
+    public byte[] particao;
     private boolean[] mapaDeBits;
     public LinkedList<BlocoDeIndices> listaBlocoDeIndices;
 
@@ -34,6 +34,7 @@ public class AlocacaoIndexada {
                 ocupado = estaOcupado(randomNumber);
             }
             blocoDeIndices.add(randomNumber);            
+            particao[randomNumber] = buffer[i];
             mapaDeBits[randomNumber] = true;
         }
         listaBlocoDeIndices.add(blocoDeIndices);        
