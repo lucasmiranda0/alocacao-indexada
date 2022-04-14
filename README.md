@@ -10,5 +10,6 @@
 
 
 **Referências utilizadas para realização do projeto**:
+
 MAZIERO, Carlos A. Sistemas operacionais: conceitos e mecanismos. Livro aberto, 2014.
 SILBERSCHATZ, Abraham; GALVIN, Peter Baer; GAGNE, Greg. Fundamentos de Sistemas Operacionais . Grupo Gen-LTC, 2000.
