@@ -1,6 +1,10 @@
 # Alocação Indexada
 
-**Resumo**:
+**O que é Alocação de arquivos?**
+
+A alocação de arquivos consiste em dispor (alocar) o conteúdo e os metadados dos arquivos dentro de blocos. Como os blocos são pequenos, um arquivo pode precisar de muitos blocos para ser armazenado no disco: por exemplo, um arquivo de filme em formato MP4 com 1 GB de tamanho ocuparia 262.144 blocos de 4 KBytes. O conteúdo do arquivo deve estar disposto nesses blocos de forma a permitir um acesso rápido, flexível e confiável. Por isso, a forma de alocação dos arquivos nos blocos do disco tem um impacto importante sobre o desempenho e a robustez do sistema de arquivos.
+
+**Por que utilizar a Alocação Indexada?**:
 
 A alocação encadeada resolve os problemas de fragmentação externa e declaração de tamanho da alocação contígua. No entanto, na ausência de uma FAT, a alocação encadeada não pode suportar um acesso direto eficiente, já que os ponteiros para os blocos são espalhados com os próprios blocos por todo o disco e devem ser recuperados em ordem. A alocação indexada resolve esse problema colocando todos os ponteiros juntos em uma locação: o bloco de índices.
 
